@@ -18,8 +18,7 @@ function countdown() {
         displayMessage();
       }
     }, 1000);
-  }
-
+}
 
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
@@ -116,6 +115,8 @@ function showQuestions(questions, quizContainer){
 
 	quizContainer.innerHTML = output.join('');
 }
+
+countdown()
 
 showQuestions(questions, quizContainer);
 
