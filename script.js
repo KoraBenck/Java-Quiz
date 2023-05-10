@@ -43,6 +43,7 @@ var questions = [
             a: "The Century Eagle",
             b: "The Millenium Falcon",
             c: "The Decade Hawk",
+            d: "The Eon Harpy",
         },
         correctAnswer: "b"
     },
@@ -52,9 +53,40 @@ var questions = [
             a: "Darth Vader",
             b: "Obi-Wan",
             c: "Chewbacca",
+            d: "Han Solo",
         },
         correctAnswer: "a"
-    }
+    },
+    {
+        question: "What color lightsaber to Obi-wan weild?",
+        answers: {
+            a: "Red",
+            b: "Green",
+            c: "Blue",
+            d: "Purple",
+        },
+        correctAnswer: "c"
+    },
+    {
+        question: "Where did Lando Calrissian betray Han Solo?",
+        answers: {
+          a: "Naboo",
+          b: "Courascant",
+          c: "Hoth",
+          d: "Cloud City",
+        },
+        correctAnswer: "d"
+    },
+    {
+      question: "What color is R2-D2?",
+      answers: {
+        a: "Blue and White",
+        b: "Gold",
+        c: "Red and White",
+        d: "Orange",
+      },
+      correctAnswer: "a"
+    },
 ]
 
 function showQuestions(questions, quizContainer){
