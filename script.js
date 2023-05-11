@@ -1,3 +1,4 @@
+var timerEl = document.getElementById('countdown')
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit')
@@ -15,10 +16,12 @@ function countdown() {
       } else {
         timerEl.textContent = '';
         clearInterval(timeInterval);
-        displayMessage();
+        showQuestions(questions, quizContainer);;
       }
     }, 1000);
 }
+
+countdown()
 
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
@@ -40,7 +43,7 @@ var questions = [
         question: "What is Han Solo's ship called?",
         answers: {
             a: "The Century Eagle",
-            b: "The Millenium Falcon",
+            b: "The Millennium Falcon",
             c: "The Decade Hawk",
             d: "The Eon Harpy",
         },
@@ -57,7 +60,7 @@ var questions = [
         correctAnswer: "a"
     },
     {
-        question: "What color lightsaber to Obi-wan weild?",
+        question: "What color lightsaber to Obi-wan wield?",
         answers: {
             a: "Red",
             b: "Green",
@@ -115,10 +118,6 @@ function showQuestions(questions, quizContainer){
 
 	quizContainer.innerHTML = output.join('');
 }
-
-countdown()
-
-showQuestions(questions, quizContainer);
 
 function showResults(questions, quizContainer, resultsContainer){
 	
