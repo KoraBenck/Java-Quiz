@@ -9,6 +9,14 @@ const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
 
+const next_btn = document.querySelector("footer .next_btn");
+const bottom_ques_counter = document.querySelector("footer .total_que");
+
+function queCounter(index){
+    let totalQueCountTag = '<span><p>'+ index +'</p> of <p>'+ questions.length +'</p> Questions</span>';
+    bottom_ques_counter.innerHTML = totalQueCountTag;  
+}
+
 start_btn.onclick = ()=>{
     info_box.classList.add("activeInfo"); 
 }
@@ -57,9 +65,6 @@ restart_quiz.onclick = ()=>
 quit_quiz.onclick = ()=>{
     window.location.reload();
 }
-
-const next_btn = document.querySelector("footer .next_btn");
-const bottom_ques_counter = document.querySelector("footer .total_que");
 
 next_btn.onclick = ()=>{
     if(que_count < questions.length - 1){ 
@@ -192,7 +197,3 @@ function startTimerLine(time){
     }
 }
 
-function queCounter(index){
-    let totalQueCounTag = '<span><p>'+ index +'</p> of <p>'+ questions.length +'</p> Questions</span>';
-    bottom_ques_counter.innerHTML = totalQueCounTag;  
-}
